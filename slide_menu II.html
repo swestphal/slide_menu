@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+* {
+	margin:0;
+	padding:0;
+	border:none;
+}
+	
+body {
+	
+	}
+
+.wrapper {
+	width:100%;
+	height:100vh;
+	overflow:hidden;
+	position:relative;
+}
+
+
+
+#slide_menu{
+		position:fixed;
+		width:300px;
+		height:100vh;
+		background-color:LightCoral;
+		left:-300px;
+		top:0px;
+		padding-left:3em;
+		box-sizing:border-box;
+		-webkit-transition:all .5s ease-in;
+		-webkit-box-sizing:border-box;
+	}
+	
+
+	
+label {
+	cursor:pointer;
+	position:fixed;
+	cursor: pointer;
+	display: inline-block;
+	width: 2em;
+	height: 1.6em;
+	
+	top: 3em;
+	left: 3em;
+	z-index:70;
+}
+span {
+	margin: 0;
+	display: block;	
+	position: relative;
+}
+
+span:before {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 2em;
+	height: 0.35em;
+	background: MediumAquaMarine ;
+	box-shadow: 0 0.6em 0 0 MediumAquaMarine , 0 1.2em 0 0 MediumAquaMarine ;   /* zwei unteren */
+}
+
+
+	#menu_checkbox {
+		display:none;
+	}
+	
+	#menu_checkbox:checked + #slide_menu,
+	#menu_checkbox:checked + #slide_menu + .wrapper_content {
+		-webkit-transform:translate(300px,0);
+		-webkit-transition:all .5s ease-out;
+	}
+	
+	
+	ul#slide_menu {
+	
+		padding-top:8em;
+	}
+	
+	#slide_menu li {
+		list-style-type:none;
+		padding:1.5em 0;
+	}
+	
+	#slide_menu a {
+		text-decoration:none;
+		font-family: 'Josefin Slab', serif;
+		font-size:30px;
+		color:SlateBlue;
+		font-weight:bold;
+	}
+	
+	
+	.wrapper_content {
+		position:absolute;
+		top:0;
+		left:0px;
+		width:100%;
+		-webkit-transition:all .5s ease-in;
+		-webkit-box-sizing:border-box;
+	}
+
+	.content1 {	color:yellow;
+		height:100vh;
+		background:url(desk.png) no-repeat;
+		-webkit-background-size:cover;
+	}
+	
+	.content2 {	
+		height:100vh;
+		background:url(desk.png) no-repeat;
+		-webkit-background-size:cover;
+	}
+
+ 
+</style>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="wrapper">
+
+		<div class="menu">
+			<label for="menu_checkbox"><span></span></label>
+			<input type="checkbox" id="menu_checkbox"/>
+		
+	
+	
+			<ul id="slide_menu">
+			 	<li><a href="">Home</a></li>
+			 	<li><a href="">Portfolio</a></li>
+			 	<li><a href="">About me</a></li>
+			 	<li><a href="">Blog</a></li>
+			</ul>	
+		
+			<div class="wrapper_content">
+				<div class="content1">
+					<p></p>
+				</div>
+				<div class="content2">
+					<p></p>
+				</div>
+			</div>
+			
+		</div>
+		
+</div>
+</div>
+</body>
+</html>
